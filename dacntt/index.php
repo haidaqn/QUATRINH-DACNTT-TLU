@@ -94,7 +94,6 @@ include 'database.php';
             <label for="disease">Disease:</label>
             <input type="text" id="disease" name="disease"><br><br>
 
-
             <input type="submit" value="Submit">
         </form>
     </div>
