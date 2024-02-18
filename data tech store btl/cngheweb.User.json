@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "65ad2535a6c406bfd05e5a26"
+  },
+  "name": "admin",
+  "password": "$2b$10$MPLn4leYce6LprYIeDAB2eI/OjOSraVM/eje5yaHBoFJQDunAxOki",
+  "email": "admin",
+  "mobile": "0335185623",
+  "role": 2003,
+  "isBlocked": false,
+  "cart": [],
+  "createdAt": {
+    "$date": "2024-01-21T14:07:49.989Z"
+  },
+  "updatedAt": {
+    "$date": "2024-01-21T14:07:49.989Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65bf94777d09565632b1b150"
+  },
+  "name": "Hai Dang",
+  "password": "$2b$10$dOxTA6MhrLISZfN7k0LGouV56bRctJL4EUms/dCAe/79QWFGbVCuK",
+  "email": "dang14893@gmail.com",
+  "mobile": "0373313232",
+  "role": 1111,
+  "isBlocked": false,
+  "cart": [
+    {
+      "product": {
+        "$oid": "649af3d6a704f7662b2f9b08"
+      },
+      "quantity": 1,
+      "color": "white",
+      "_id": {
+        "$oid": "65bf95687d09565632b1b197"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-02-04T13:43:19.677Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-04T17:50:25.075Z"
+  },
+  "__v": 0,
+  "address": "Chưa có địa chỉ"
+}]
