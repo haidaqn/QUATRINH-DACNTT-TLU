@@ -12,22 +12,61 @@ if (isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body{
-            background-color: #f0f0f0;
-            /* align center */
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            background-color: #fff;
-            width: 50%;
-            padding: 10px;
-            border-radius: 10px;
-            /* border dot */
-            border: 2px dashed #000;
-        }
+        body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 100px auto;
+    width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.container form {
+    margin-top: 20px;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.container input[type="text"],
+.container input[type="password"],
+.container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -54,7 +93,7 @@ if (isset($_SESSION['username'])) {
             }
             ?>
             <!-- Full name, birthday, address -->
-            <h1>Login</h1>
+            <h1 class='login'>Login</h1>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"><br><br>
 

@@ -3,7 +3,7 @@ session_start();
 // connect to db using pdo
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Haidang2003x@";
 $dbname = "dacntt";
 
 try {

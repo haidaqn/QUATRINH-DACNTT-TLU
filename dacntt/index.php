@@ -8,39 +8,110 @@ include 'database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        body{
-            background-color: #f0f0f0;
-            gap: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            width: 50%;
-            padding: 10px;
-            border-radius: 10px;
-            /* border dot */
-            border: 2px dashed #000;
-        }
+       body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container {
+    background-color: #fff;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+    width:100%;
+}
+
+.container form {
+    margin-top: 20px;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.container input[type="text"],
+.container input[type="date"],
+.container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container th,
+.container td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.container th {
+    background-color: #f2f2f2;
+}
+
+.container a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.title {
+    	
+   
+}
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the system</h1>
+        <h1 class='title'>Welcome to the system</h1>
         <?php
         if (isset($_SESSION['username'])) {
-            echo "Welcome ".$_SESSION['username'];
-        }else{
-            header('Location: login.php');
-        }
-        ?>
-        <a href="logout.php">Logout</a>
+    echo "<h1>Welcome " . $_SESSION['username'] . "</h1>";
+} else {
+    $redirect = true;
+    echo "<h1>Please log in</h1>";
+}
+?>
+<h1>
+
+    <a href="logout.php">Logout</a>
+</h1>
         <br>
         <?php
         // handle form
